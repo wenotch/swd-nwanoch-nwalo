@@ -1,0 +1,167 @@
+
+main{
+  margin: 5% 2%;
+  display: flex;
+}
+
+aside{
+  width: 450px;
+  padding: 20px 30px;
+  border-right: 1px solid silver;
+}
+
+aside h4{
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+aside input{
+  border: 1px solid black;
+  padding: 5px;
+  width: 180px;
+}
+
+aside button{
+  width: 80px;
+  padding: 7px 0;
+}
+
+aside input:focus{
+  z-index: 2;
+  border-color: #d9534f;
+  box-shadow: 0 0 3px 0 #d9534f;
+}
+
+.store-items{
+  display: flex;
+}
+
+.store-items img{
+  width: 80px;
+  height: 80px;
+}
+
+hr{
+  border-top: 1px silver solid;
+}
+
+.store-details{
+  padding-left: 30px;
+}
+
+.store-details p{
+  margin-bottom: 2px;
+}
+
+.store-details i{
+  font-size: .8em;
+}
+
+.store-details p:last-of-type{
+  font-weight: 500;
+}
+
+.end{
+  float: right;
+}
+
+article{
+  width: 100%;
+  /* background: silver; */
+  padding: 20px 30px;
+}
+
+#products{
+  width: 100%;
+  margin: 0 auto;
+}
+
+#products .cost{
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.row{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.store-pad{
+  padding: 10px 15px;
+}
+
+.paged{
+  margin: 50px 0;
+}
+
+.page-link{
+  color: black;
+}
+
+.page-link:hover {
+  background-color: whitesmoke;
+  color: #d9534f;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.page-link span{
+  color: #d9534f;
+}
+
+.paged .active{
+  background-color: #d9534f;
+}
+
+.onsale{
+  min-width: 3em;
+  min-height: 3em;
+  line-height: 3em;
+  font-size: 1em;
+  font-weight: 400;
+  position: absolute;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #d9534f;
+  color: #fff;
+  z-index: 9;
+  right: -20px;
+  top: -20px;
+}
+
+@media (max-width: 1200px) {
+
+  main{
+    margin: 5% 2%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  aside{
+    width: 100%;
+    padding: 20px 30px;
+    border-right: none;
+  }
+
+  aside input{
+    width: 88%;
+  }
+}
+
+@media (min-width : 550px) and (max-width : 610px) {
+  #products h4{
+    font-size: 1.1em;
+  }
+}
+
+/* DATA SLIDER */
+
+#ex1Slider{
+  background: #bababa;
+  border: 1px solid white;
+}

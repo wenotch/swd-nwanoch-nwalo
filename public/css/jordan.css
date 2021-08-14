@@ -1,0 +1,192 @@
+button{
+  width: auto;
+}
+
+#description{
+  padding-bottom: 50px;
+}
+
+#description ul{
+  display: inline;
+  padding: 0;
+}
+
+#description hr{
+  margin: 12px 0;
+  width: auto;
+}
+
+#description li{
+  display: inline;
+  margin-right: 15px;
+}
+
+#description a{
+  padding: 10px 5px;
+  font-weight: 500;
+}
+
+#description .active{
+  border-top: 3px #d9534f solid;
+}
+
+#description textarea{
+  height: 80px;
+  min-height: 60px;
+  resize: vertical;
+}
+
+table{
+width: 90%;
+margin: 10px
+}
+
+tr{
+  border: 1px solid #d9534fff;
+}
+
+th{
+  width: 140px;
+  padding: 8px 10px;
+  font-weight: 500;
+  border-right: 1px solid #d9534fff;
+}
+
+td{
+  padding: 8px 10px;
+}
+
+/* ----- Single Product ------ */
+
+.section {
+  margin: 5% auto;
+}
+
+.fades {
+    opacity: .5;
+}
+
+.button {
+    display: block;
+    color: #ffffff;
+    background-color: #d9534f;
+    padding: 6px;
+    border-radius: 15px;
+}
+
+.button:hover {
+    color: #DFD0D0;
+    background-color: darkslategrey;
+}
+
+.single-product {
+    padding: 20px 50px;
+}
+
+.single-product .col img {
+    padding: 0;
+    margin: 2px;
+    box-shadow: 4px 5px 4px gray;
+}
+
+.single-product h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-product .fa {
+    color: #d9534f;
+    margin-left: 9%;
+}
+
+.space-in-pic {
+    padding: 0;
+    margin: 2px;
+}
+
+.small-img-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.contain{
+  padding: 0 50px;
+}
+
+@media (max-width: 600px) {
+    .row{
+      text-align: center;
+    }
+    .prod{
+        margin-top: 10px;
+    }
+    .col{
+      flex-basis: 100%;
+    }
+    .single-product .row{
+      text-align: left;
+    }
+    .single-product .col{
+      padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+    }
+  }
+  @media (max-width: 1200px) {
+    .row{
+      text-align: center;
+    }
+    .col{
+      flex-basis: 100%;
+    }
+    .col .pic{
+        height: auto;
+    }
+    .prod{
+        margin-top: 10px;
+    }
+    .single-product .row{
+      text-align: left;
+    }
+    .single-product .col{
+      padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+    }
+
+  }
+
+  /* Related Products */
+  @media only screen and (max-width : 600px){
+    .disappear{
+        display: none;
+    }
+    .related{
+        text-decoration: double;
+    }
+    .disapp{
+        display: none;
+    }
+  }
+  @media only screen and (max-width : 900px){
+    .disappear{
+        display: none;
+    }
+  }
+  @media only screen and (max-width : 991px){
+    .view{
+        display: none;
+    }
+  }
+
+footer input{
+  border: none;
+  outline: none;
+}

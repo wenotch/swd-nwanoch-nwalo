@@ -1,0 +1,257 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" initial-scale = 1.0, width = device-width">
+  <meta name="author" content=" Ini Okonko & Nwalo Okechukwu  ">
+  <meta name="description" content="SWD E-commerce store where you can pick up your favourite collections at little cost, We ensure you
+    get 100 times value for your products">
+  <title>Product Image</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+  <!-- Custom styles for this page -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/jordan.css">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-brand">
+        <h1> <a href="">S.W.D</a> </h1>
+      </div>
+
+      <div class="links">
+        <ul>
+
+          <input type="checkbox" name="" value="" id="menu">
+          <label for="menu"><i class="fa fa-bars"></i></label>
+
+          <a href="/"> <i class="fa fa-home"></i>Home</a>
+          <a href="/store"><i class="fas fa-bags-shopping"></i>Store</a>
+          <a href="/blog"><i class="fa fa-blog"></i>Blog</a>
+          <a href="/account"><i class="fa fa-user-tie"></i>Account</a>
+          <a id="me" href="/cart"><i class="fas fa-shopping-cart"></i><small id="cart-num"></small> </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!---------- Single Product Details ----------->
+
+  <section class="section">
+
+    <div class=" single-product">
+      <div class="row">
+
+        <div class="col ">
+          <img src="/<%= productItem.image%>" class="pic" id="productImg" width="100%" alt="Jordan BLUE-WHITE">
+
+          <!-- <div class="small-img-row">
+            <div class="small-img-col space-in-pic">
+              <img src="/images/shoe5-600x600.jpg" class="small-img" width="100%" alt="">
+            </div>
+            <div class="small-img-col space-in-pic">
+              <img src="/images/shoe4-600x600.jpg" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col space-in-pic">
+              <img src="/images/shoe6-600x600.jpg" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col space-in-pic">
+              <img src="/images/shoe7-600x600.jpg" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col space-in-pic">
+              <img src="/images/shoe8-600x600.jpg" width="100%" class="small-img" alt="">
+            </div>
+          </div> -->
+
+        </div>
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <div class="item_details col ml-3 mb-2">
+          <p class="gray">Home / Products</p>
+          <h1><%= productItem.name%></h1>
+          <h4 class="my-3">NGN <%= productItem.price%></h4>
+
+          <form action="/product_images/:product" class="my-4" method="POST">
+            <div class="form-group">
+              <select class="custom-select form-control" name="color">
+
+                <% color.forEach((item, i) => { %>
+                  <option value="blue" selected> <%= item%> </option>
+                <%}); %>
+
+              </select>
+            </div>
+            <div class="form-group">
+              <input class="form-control" value="1" type="number" name="number" min="1">
+            </div>
+            <div class="form-group">
+              <input class="form-control" value="<%= product%>" type="text" name="prodName" hidden>
+            </div>
+            <button class="btn-theme" type="submit">Add To Cart</button>
+          </form>
+          <h3 class="prod">Product Details <i class="fa fa-indent"></i></h3>
+          <p class="my-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Nobis ipsa numquam sunt inventore exercitationem eius esse dignissimos quam beatae,
+            voluptas iusto perferendis dolor impedit aspernatur commodi voluptates veritatis voluptate quos.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ---------- Featured Products ---------- -->
+
+  <section id="description">
+
+    <div class="contain">
+      <hr>
+      <ul>
+        <li><a id="descript" class="active" href="#description">Description</a> </li>
+        <li><a id="add_info" href="#description">Additional Information</a> </li>
+        <li><a id="rev" href="#description">Review (0)</a> </li>
+      </ul>
+    </div>
+
+    <div class="info space_top contain">
+      <div class="descript away">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="additional_info away">
+        <table>
+          <tbody>
+            <tr>
+              <th>Color</th>
+              <!-- <td>Black, Blue, Red, Yellow, Green</td> -->
+              <td><%= productItem.details.color%></td>
+            </tr>
+            <tr>
+              <th>Size</th>
+              <td><%= productItem.details.size%></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="review away">
+        <h3>Review</h3>
+        <p>There are no reviews yet</p>
+
+        <p>Your rating</p>
+        <p><span>
+            <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+          </span></p>
+        <form action="/product_images" class="needs-validation" novalidate>
+
+          <div class="mb-3">
+            <label for="review">Your review</label>
+            <textarea name="review" id="review" class="form-control" required></textarea>
+            <div class="invalid-feedback">
+              Please input your review.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="fullName">Full name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid full name is required.
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+
+          </div>
+
+
+          <button class="btn-theme" type="submit">Submit</button>
+
+        </form>
+      </div>
+      <hr class="mt-5">
+    </div>
+  </section>
+
+  <!-- ---------- Related Products ---------- -->
+
+  <section>
+
+    <div id="products">
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-lg-6 my-2">
+            <h3 class="related">Related Products</h3>
+            <hr class="d-xl-none products">
+          </div>
+          <div class=" col-lg-6 view">
+            <p class="text-right"><a href="/store">
+                <button type="button" class="btn-theme" name="button">
+                  View More <i class="fas fa-arrow-right"></i>
+                </button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <% items.forEach((item, i) => { %>
+
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6 space">
+          <div class="card ">
+            <div class="card-header">
+              <a href="/product_images/<%= item.name%>"><span class="img-overlay"><strong class="">View Details</strong> </span>
+                <img src="/<%= item.image %>" alt="Jordan">
+              </a>
+
+            </div>
+            <div class="card-body">
+              <h4><%= item.name%></h4>
+              <p class="cost"> <%= item.price%></p>
+              <p class="icon"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i></span> <span><button><i class="far fa-heart black"></i></button></span></p>
+            </div>
+          </div>
+        </div>
+
+        <% }); %>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<%- include('partials/footer.ejs')%>
+
+</body>
+
+</html>

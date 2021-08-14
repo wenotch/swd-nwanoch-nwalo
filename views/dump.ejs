@@ -1,0 +1,428 @@
+<div class="row">
+
+
+  <% items.forEach((item, i) => { %>
+
+  <div class="col-lg-3 col-sm-4 col-6 space">
+    <div class="card ">
+      <div class="card-header">
+        <a href="#"><span class="img-overlay"><strong class="">View Details</strong> </span></a>
+          <img src="images/shoe5-600x600.jpg" alt="Jordan">
+      </div>
+      <div class="card-body">
+        <h4><%= item.name%></h4>
+        <p class="cost"> <%= item.price%></p>
+        <p class="icon"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i></span> <span><button><i class="far fa-heart black"></i></button></span></p>
+      </div>
+    </div>
+  </div>
+
+  <% }); %>
+
+
+</div>
+<!-- <div class="row">
+
+
+  <div class="col-lg-3 col-sm-4 col-6 space">
+    <div class="card ">
+      <div class="card-header">
+        <a href="#"><span class="img-overlay"><strong class="">View Details</strong> </span></a>
+          <img src="images/shoe5-600x600.jpg" alt="Jordan">
+      </div>
+      <div class="card-body">
+        <h4><%= items.shoe.name%></h4>
+        <p class="cost"> <%= items.shoe.price%></p>
+        <p class="icon"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i></span> <span><button><i class="far fa-heart black"></i></button></span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-4 col-6 space">
+    <div class="card ">
+      <div class="card-header">
+        <a href="#"><span class="img-overlay"><strong class="">View Details</strong> </span></a>
+          <img width="100%" src="images/shoe7-600x600.jpg" alt="IASTE-IMAGE">
+      </div>
+      <div class="card-body">
+        <h4><%= items.bag.name%></h4>
+        <p class="cost"> <%= items.bag.price%> </p>
+        <p class="icon"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i></span> <span><button><i class="far fa-heart black"></i></button></span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-4 col-6 space">
+    <div class="card ">
+      <div class="card-header">
+        <a href="#"><span class="img-overlay"><strong class="">View Details</strong> </span></a>
+          <img width="100%" src="images/shoe8-600x600.jpg" alt="IASTE-IMAGE">
+      </div>
+      <div class="card-body">
+        <h4><%= items.cloth.name%></h4>
+        <p class="cost"> <%= items.cloth.price%></p>
+        <p class="icon"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i></span> <span><button><i class="far fa-heart black"></i></button></span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-sm-4 col-6 space">
+    <div class="card ">
+      <div class="card-header">
+        <a href="#"><span class="img-overlay"><strong class="">View Details</strong> </span></a>
+          <img width="100%" src="images/shoe4-600x600.jpg" alt="IASTE-IMAGE">
+      </div>
+      <div class="card-body">
+        <h4>Jordans Shoe</h4>
+        <p class="cost"> NGN 4, 500</p>
+        <p class="icon"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i></span> <span><button><i class="far fa-heart black"></i></button></span></p>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+
+
+// app.get('/collections', function(req, res) {
+//   const item = collections.array();
+//
+//   Query.find({}, function(err, foundQuery) {
+//
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       if (foundQuery.length > 0) {
+//         foundQuery.forEach((search) => {
+//           const queryString = search.queryName;
+//
+//           let tag = item.filter(item =>
+//             item.tag === queryString
+//           );
+//
+//             // console.log(tag);
+//             res.render('collections', {
+//               items: tag,
+//               query: lodash.capitalize(queryString)
+//             });
+//           });
+//       }else {
+//         res.render('collections', {
+//               items: item,
+//               query: 'Collections'
+//             });
+//       }
+//
+//     }
+//
+//     Query.deleteMany({}, function(err) {
+//       if (!err) {
+//         console.log('Search query deleted!');
+//       }
+//     });
+//   });
+//
+// });
+
+
+app.get('/store/:categories', function (req, res) {
+  var categoryName = req.params.categories;
+
+  if (categoryName !== 'collections') {
+    const testName = test.test();
+
+      testName.forEach((item, i) => {
+        var requiredName = item.name;
+
+        if (requiredName === categoryName) {
+          res.render('test', {link: item.name})
+        }
+      });
+  }
+  else if (){
+    const item = collections.array();
+
+    Query.find({}, function(err, foundQuery) {
+
+      if (err) {
+        console.log(err);
+      } else {
+        if (foundQuery.length > 0) {
+          foundQuery.forEach((search) => {
+            const queryString = search.queryName;
+
+            let tag = item.filter(item =>
+              item.tag === queryString
+            );
+
+              // console.log(tag);
+              res.render('collections', {
+                items: tag,
+                query: lodash.capitalize(queryString)
+              });
+            });
+        }else {
+          res.render('collections', {
+                items: item,
+                query: 'Collections'
+              });
+        }
+
+      }
+
+      Query.deleteMany({}, function(err) {
+        if (!err) {
+          console.log('Search query deleted!');
+        }
+      });
+    });
+
+  }
+
+});
+
+
+app.get('/store/:categories', function (req, res) {
+  const categoryName = req.params.categories;
+  const item = collections.array();
+
+  let newCollection = item.map(function (item) {
+    return item.tag;
+  });
+
+  let unique = [...new Set(newCollection)];
+
+  console.log(categoryName);
+  // console.log(unique);
+
+  Query.find({}, function(err, foundQuery) {
+console.log(foundQuery.length);
+    if (err) {
+      console.log(err);
+    } else {
+      if (foundQuery.length > 0) {
+        foundQuery.forEach((search) => {
+          const queryString = search.queryName;
+
+          let tag = item.filter(item =>
+            item.tag === queryString
+          );
+
+            res.render('collections', {
+              items: tag,
+              query: lodash.capitalize(queryString)
+            });
+          });
+      }else if (foundQuery.length === 0) {
+        const testName = test.test();
+
+          testName.forEach((item, i) => {
+            var requiredName = item.name;
+
+              if (requiredName === categoryName) {
+                res.render('test', {link: item.name})
+              }
+              else {
+                console.log(req.params.categories);
+              }
+          });
+      }else{
+        res.render('collections', {
+              items: item,
+              query: 'Collections'
+            });
+      }
+      // if ( foundQuery) {
+      //
+      //     foundQuery.forEach((search) => {
+      //       const queryString = search.queryName;
+      //
+      //       let tag = item.filter(item =>
+      //         item.tag === queryString
+      //       );
+      //
+      //         res.render('collections', {
+      //           items: tag,
+      //           query: lodash.capitalize(queryString)
+      //         });
+      //       });
+      //
+      // }
+
+      // if (!foundQuery) {
+      //   const testName = test.test();
+      //
+      //     testName.forEach((item, i) => {
+      //       var requiredName = item.name;
+      //
+      //         if (requiredName === categoryName) {
+      //           res.render('test', {link: item.name})
+      //         }
+      //     });
+      // }
+
+      // if (!categoryName) {
+      // console.log('HI');
+      // }
+
+    }
+
+    Query.deleteMany({}, function(err) {
+      if (!err) {
+        // console.log('Search query deleted!');
+      }
+    });
+  });
+
+
+
+
+  // Query.deleteMany({}, function(err) {
+  //   if (!err) {
+  //     console.log('Search query deleted!');
+  //   }
+  // });
+
+  // else if (){
+  //   const item = collections.array();
+  //
+  //   Query.find({}, function(err, foundQuery) {
+  //
+  //     if (err) {
+  //       console.log(err);
+  //     } else {
+  //       if (foundQuery.length > 0) {
+  //         foundQuery.forEach((search) => {
+  //           const queryString = search.queryName;
+  //
+  //           let tag = item.filter(item =>
+  //             item.tag === queryString
+  //           );
+  //
+  //             // console.log(tag);
+  //             res.render('collections', {
+  //               items: tag,
+  //               query: lodash.capitalize(queryString)
+  //             });
+  //           });
+  //       }else {
+  //         res.render('collections', {
+  //               items: item,
+  //               query: 'Collections'
+  //             });
+  //       }
+  //
+  //     }
+  //
+  //     Query.deleteMany({}, function(err) {
+  //       if (!err) {
+  //         console.log('Search query deleted!');
+  //       }
+  //     });
+  //   });
+  //
+  // }
+
+});
+
+
+
+  if (req.isAuthenticated()) {
+    User.findById(req.user, function(err, found) {
+      if (!err) {
+        if (found) {
+          const userProduct = found.product;
+          const length = userProduct.length;
+
+              console.log(userProduct);
+            res.render('cart', {
+              product: userProduct,
+              productNumber: length
+            });
+          }
+        }
+      });
+
+  } else {
+    res.redirect('/sign-in');
+  }
+
+
+
+<%# ----------------------------  trying to improve search --------------------------------------- %>
+
+//   var array = [];
+//
+//   const item = collections.array();
+//
+// var test = 'my name is nwalo'
+//   var splitItemName = test.split(' ');
+//
+//   var myName = item.forEach((item, i) => {
+//     var string = item.name.toString();
+//     var stringArr = string.split(' ');
+//     stringArr.forEach((item, i) => {
+//       // console.log(array.length);
+//       if (array.length >= 0) {
+//         if (!array.includes(item)) {
+//           array.push(item);
+//         }else {
+//           // console.log(`${item} is in array`);
+//         }
+//       }
+//     });
+//
+//
+//   });
+//
+//   // console.log(array);
+
+
+<%# node mailer %>
+
+const nodemailer = require("nodemailer");
+
+  // Generate test SMTP service account from ethereal.email
+  // Only needed if you don't have a real mail account for testing
+  let testAccount = nodemailer.createTestAccount();
+
+  User.findById(req.user, function(err, found) {
+      if (!err) {
+        if (found) {
+
+          const userProduct = found.product;
+          const length = userProduct.length;
+
+          // create reusable transporter object using the default SMTP transport
+          let transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com", //host for gmail
+            port: 465,
+            secure: true, // true for 465(gmail), false for other ports
+            auth: {
+              user: process.env.GMAIL_ID, // generated gmail account
+              pass: process.env.GMAIL_PASS, // generated gmail password
+            },
+          });
+
+          // send mail with defined transport object
+          let info = transporter.sendMail({
+            from: process.env.GMAIL_ID, // sender address
+            to: req.body.emailAddress, // list of receivers
+            bcc: 'nwalobright@gmail.com',
+            subject: "SWD Payment Notification", // Subject line
+            text: 'PLease go', // plain text body
+          }, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
+          //
+          // console.log("Message sent: %s", info.response);
+          // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+        }
+      }
+      });

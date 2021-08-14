@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" initial-scale = 1.0, width = device-width">
+  <meta name="description" content="SWD E-commerce store where you can pick up your favourite collections at little cost, We ensure you
+    get 100 times value for your products">
+  <title>Account</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+  <!-- Custom styles for this page -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/store.css">
+
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="nav-brand">
+      <h1> <a href="">S.W.D</a> </h1>
+    </div>
+
+    <div class="links">
+      <ul>
+
+        <input type="checkbox" name="" value="" id="menu">
+        <label for="menu"><i class="fa fa-bars"></i></label>
+
+        <a href="/"> <i class="fa fa-home"></i>Home</a>
+        <a href="/store"><i class="fas fa-bags-shopping"></i>Store</a>
+        <a href="/blog"><i class="fa fa-blog"></i>Blog</a>
+        <a id="drop" href="/account"><i class="fa fa-user-tie"></i>Account </a>
+
+        <a id="me" href="/cart"><i class="fas fa-shopping-cart"></i><small id="cart-num"></small> </a>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<a href="/sign-out">
+<button type="button" name="button">Sign out</button>
+</a>
+
+<%- include('partials/footer.ejs')%>
+</body>
+
+</html>

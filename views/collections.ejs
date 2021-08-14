@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" initial-scale = 1.0, width = device-width">
+  <meta name="description" content="SWD E-commerce store where you can pick up your favourite collections at little cost, We ensure you
+    get 100 times value for your products">
+  <title>Collections</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+  <!-- Custom styles for this page -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/store.css">
+
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="nav-brand">
+      <h1> <a href="">S.W.D</a> </h1>
+    </div>
+
+    <div class="links">
+      <ul>
+
+        <input type="checkbox" name="" value="" id="menu">
+        <label for="menu"><i class="fa fa-bars"></i></label>
+
+        <a href="/"> <i class="fa fa-home"></i>Home</a>
+        <a class="active" href="/store"><i class="fas fa-bags-shopping"></i>Store</a>
+        <a href="/blog"><i class="fa fa-blog"></i>Blog</a>
+        <a id="drop" href="/account"><i class="fa fa-user-tie"></i>Account  </a>
+        <!-- <a href="/contacts"><i class="fa fa-address-card"></i>Contact Us</a> -->
+
+        <a id="me" href="/cart"><i class="fas fa-shopping-cart"></i><small id="cart-num"></small> </a>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <aside class="">
+      <form id="searchForm" class="" action="/store" method="post">
+        <input id="searchInput" class="outline-gray" type="search" name="search" value="" placeholder="Search product">
+        <button class="" type="submit" name="button">Search</button>
+      </form>
+
+      <div class="space">
+        <h4>Our Best Sellers</h4>
+
+        <div class="store-items">
+          <a href="#"><img src="/images/oxford-shoe.jpg" alt=""></a>
+          <div class="store-details">
+            <a href="">Blue Denim Jeans</a>
+            <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i>
+            </p>
+            <p class="cost"> NGN 4, 500</p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="store-items">
+          <a href="#"><img src="/images/oxford-shoe.jpg" alt=""></a>
+          <div class="store-details">
+            <a href="">Pink Shoe</a>
+            <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i>
+            </p>
+            <p class="cost"> NGN 4, 500</p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="store-items">
+          <a href="#"><img src="/images/oxford-shoe.jpg" alt=""></a>
+          <div class="store-details">
+            <a href="">Jordans Sneakers</a>
+            <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i>
+            </p>
+            <p class="cost"> NGN 4, 500</p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="store-items">
+          <a href="#"><img src="/images/oxford-shoe.jpg" alt=""></a>
+          <div class="store-details">
+            <a href="">Brown Bag</a>
+            <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i>
+            </p>
+            <p class="cost"> NGN 4, 500</p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="store-items">
+          <a href="#"><img src="/images/oxford-shoe.jpg" alt=""></a>
+          <div class="store-details">
+            <a href="">Brown Bag</a>
+            <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i>
+            </p>
+            <p class="cost"> NGN 4, 500</p>
+          </div>
+
+        </div>
+        <hr>
+      </div>
+
+      <div class="cate">
+        <h4>Browse By Categories</h4>
+        <li>
+          <a href="/store/accessories">Accessories</a> <span class="end">(<%= categoryArray.accessory%>)</span>
+        </li>
+        <li>
+          <a href="/store/bags">Bags</a> <span class="end">(<%= categoryArray.bag%>)</span>
+        </li>
+        <li>
+          <a href="/store/jeans">Jeans and Denim</a> <span class="end">(<%= categoryArray.jean%>)</span>
+        </li>
+        <li>
+          <a href="/store/jackets">Jackets and Coats</a> <span class="end">(<%= categoryArray.jacket%>)</span>
+        </li>
+        <li>
+          <a href="/store/shirts">Shirts and Tops</a> <span class="end">(<%= categoryArray.shirt%>)</span>
+        </li>
+        <li>
+          <a href="/store/shoes">Shoes</a> <span class="end">(<%= categoryArray.shoe%>)</span>
+        </li>
+        <li>
+          <a href="/store/sweat pants">Sweat Shirts and Pants</a> <span class="end">(<%= categoryArray.sweatPant%>)</span>
+        </li>
+      </div>
+
+      <div class="cate">
+        <h4>Price (NGN)</h4>
+        <input type="range" name="" value="" id="ex1" data-slider-id="ex1Slider" data-slider-min="0" data-slider-max="100" data-slider-step="20" data-slider-value="5">
+
+      </div>
+    </aside>
+
+    <article class="">
+      <div class="store-pad">
+        <p class="gray"> Store / <%= query%></p>
+      </div>
+
+      <div class="store-pad">
+        <h3>Collections</h3>
+        <div class="">
+          <span>Showing all <%= query%></span>
+          <form class="end" action="/collections" method="post">
+            <select class="sort outline-gray" name="sort">
+              <option data-filter="shoe" value="shoe" selected>sort by shoe</option>
+              <option data-filter="bag" value="bag">sort by bag</option>
+              <!-- <option data-filter="" value="price">Sort by price</option> -->
+            </select>
+            <input type="hidden" name="paged" value="1">
+          </form>
+        </div>
+      </div>
+
+      <section id="products">
+
+        <div class="row">
+
+
+          <% items.forEach((item, i) => { %>
+
+          <div class="col-lg-3 col-sm-4 col-6 space">
+            <div class="card ">
+              <div class="card-header">
+                <a href="/product_images/<%= item.name%>"><span class="img-overlay"><strong class="">View Details</strong> </span></a>
+                  <img src="/<%= item.image %>" alt="Jordan">
+              </div>
+              <div class="card-body">
+                <h4><%= item.name%></h4>
+                <p class="cost">NGN <%= item.price%></p>
+                <p class="icon"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i><i class="far fa-star"></i></span> <span><button><i class="far fa-heart black"></i></button></span></p>
+              </div>
+            </div>
+          </div>
+
+          <% }); %>
+
+
+        </div>
+
+        <div class="paged">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href=""><span class="fa fa-angle-left"></span> </a> </li>
+            <li class="page-item active"><a class="page-link" href="">1</a> </li>
+            <li class="page-item"><a class="page-link" href="">2</a> </li>
+            <li class="page-item"><a class="page-link" href="">3</a> </li>
+            <li class="page-item"><a class="page-link" href=""><span class="fa fa-angle-right"></span> </a> </li>
+          </ul>
+        </div>
+    </section>
+
+    </article>
+
+  </main>
+
+<%- include('partials/footer.ejs')%>
+
+</body>
+
+</html>

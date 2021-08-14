@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" initial-scale = 1.0, width = device-width">
+  <meta name="description" content="SWD E-commerce store where you can pick up your favourite collections at little cost, We ensure you
+    get 100 times value for your products">
+  <title>Cart</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+  <!-- Custom styles for this page -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/cart.css">
+
+</head>
+
+<body>
+  <!-- <header class="home"> -->
+  <nav>
+    <div class="nav-brand">
+      <h1> <a href="">S.W.D</a> </h1>
+    </div>
+
+    <div class="links">
+      <ul>
+
+        <input type="checkbox" name="" value="" id="menu">
+        <label for="menu"><i class="fa fa-bars"></i></label>
+
+        <a class="" href="/"> <i class="fa fa-home"></i>Home</a>
+        <a href="/store"><i class="fas fa-bags-shopping"></i>Store</a>
+        <a href="/blog"><i class="fa fa-blog"></i>Blog</a>
+        <a id="drop" href="/account"><i class="fa fa-user-tie"></i>Account
+        </a>
+
+        <a id="me" href="/cart"><i class="fas fa-shopping-cart"></i><small id="cart-num"><%= productNumber%></small> </a>
+
+      </ul>
+    </div>
+  </nav>
+
+  <section class="intro">
+    <h1>CART</h1>
+    <hr>
+    <div class="item_table">
+
+      <table>
+        <thead class="card-header">
+          <tr>
+            <th class="proc">
+              <p class="off">Invisible</p>
+            </th>
+            <th class="proc">Product</th>
+            <th>Price</th>
+            <th class="quantity">Qty</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% product.forEach((item, i) => { %>
+          <tr>
+            <td class="center">
+              <form class="" action="/delete" method="post">
+                <label for="<%=item.productName%>" class="x">x</label>
+                <input type="checkbox" id="<%=item.productName%>" name="checkbox" value="<%=item._id%>" onchange="this.form.submit()" hidden>
+                <a class="hover" href="/product_images/<%= item.productName%>"><img src="/<%= item.productImage%>" alt=""></a>
+              </form>
+            </td>
+            <td><a href="#"><%=item.productName%></a> </td>
+            <td>NGN <span class="cart_price"> <%=item.productPrice%> </span> </td>
+            <td> <%=item.productNumber%> </td>
+            <td>NGN <span class="subtotal"><%=item.productPrice * item.productNumber%></span> </td>
+          </tr>
+          <% }); %>
+
+          <tr>
+            <form id="update" class="" action="/cart" method="">
+              <td class="promo" colspan="5">
+                <div class="prom">
+                  <input id="promo_code" type="text" name="promo_code" placeholder="Insert Promo code" value="">
+                  <small class="val"> </small>
+                </div>
+
+                <button class="right update btn-theme" type="submit" name="button" disabled>Update promo code</button>
+                <!-- <input id="update" type="submit" class="right" name="" value="Update"> -->
+              </td>
+            </form>
+          </tr>
+          <tr class="hide">
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="cart">
+      <div class="card ">
+        <div class="card-header">
+          <h5>Cart Totals</h5>
+        </div>
+        <div class="card-body">
+          <table>
+            <tbody>
+              <tr>
+                <th>Subtotal</th>
+                <td> NGN <span id="totalSub"></span> </td>
+              </tr>
+              <tr class="promotion">
+                <th>Promo <sup style="font-weight: normal">(15%)</sup> </th>
+                <td class="promotion">NGN <span id="promotion">-0</span> </td>
+              </tr>
+              <tr>
+                <th>Total</th>
+                <td>NGN <span id="total"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class=" space">
+            <a class="checkout" href="/payment"><button type="button" class="btn-block btn-theme" name="button">Proceed to checkout</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<%- include('partials/footer.ejs')%>
+
+</body>
+
+</html>

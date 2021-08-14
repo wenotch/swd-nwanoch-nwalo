@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content=" initial-scale = 1.0, width = device-width">
+  <meta name="description" content="SWD E-commerce store where you can pick up your favourite collections at little cost, We ensure you
+      get 100 times value for your products">
+  <meta name="author" content="Nwalo Okechukwu">
+  <title>Contact Us</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+
+  <!-- Custom styles for this page -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/account.css" rel="stylesheet">
+</head>
+
+<body class="">
+  <nav>
+    <div class="nav-brand">
+      <h1> <a href="">S.W.D</a> </h1>
+    </div>
+
+    <div class="links">
+      <ul>
+
+        <input type="checkbox" name="" value="" id="menu">
+        <label for="menu"><i class="fa fa-bars"></i></label>
+
+        <a href="/"> <i class="fa fa-home"></i>Home</a>
+        <a href="/store"><i class="fas fa-bags-shopping"></i>Store</a>
+        <a href="/blog"><i class="fa fa-blog"></i>Blog</a>
+        <a id="drop" href="/account"><i class="fa fa-user-tie"></i>Account  </a>
+
+        <a id="me" href="/cart"><i class="fas fa-shopping-cart"></i><small></small> </a>
+        <!-- <li><a href=""><i class="fad fa-shopping-cart"></i></a></li> -->
+        <!-- FONT AWEOME PRO -->
+        <!-- <li><a href=""><i class="material-icons">shopping_cart</i></a></li> -->
+        <!-- MATERIALS ICON -->
+        <!-- <a href=""><img id="cart" src="https://img.icons8.com/ios/24/000000/shopping-cart.png" alt="">  </a> -->
+        <!-- ICONS 8 -->
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="store-pad">
+    <h3>Accessories</h3>
+    <div class="">
+      <span>Showing all results</span>
+      <form class="end" action="/index.html" method="get">
+        <select id="select" class="sort outline-gray" name="sort">
+          <option value="name">Name</option>
+          <option value="age">Age</option>
+          <option value="class">Class</option>
+        </select>
+        <button type="button" name="button">Sort</button>
+      </form>
+    </div>
+  </div>
+
+<%- include('partials/footer.ejs')%>
+
+</body>
+</html>
